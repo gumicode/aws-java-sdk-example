@@ -1,0 +1,7 @@
+POST http://localhost:8080/sns/publish
+Content-Type: application/json
+
+{
+  "topic": "test",
+  "message": "publish sns 4"
+}

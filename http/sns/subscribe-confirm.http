@@ -1,0 +1,6 @@
+POST http://localhost:8080/sns/confirm-subscribe
+Content-Type: application/json
+
+{
+  "token" : "2336412f37fb687f5d51e6e2425dacbba931e79cffc8e386ffb58a16c9e158fcef197aa80c8e90c7994a3b3c65d2cb68490d203fef3a66cad214b4e4240c1e765f14ace97a3f09669bf4d0765aa78bdf6a7c18d8443eb5ae6b42479b95a28b09d18a4fee271415ac671acc173dce2d5f"
+}

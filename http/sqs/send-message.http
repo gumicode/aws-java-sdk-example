@@ -1,0 +1,7 @@
+POST http://localhost:8080/sqs/message
+Content-Type: application/json
+
+{
+  "queue": "test",
+  "message": "send sqs 1"
+}

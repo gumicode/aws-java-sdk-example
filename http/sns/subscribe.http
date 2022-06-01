@@ -1,0 +1,6 @@
+POST http://localhost:8080/sns/subscribe
+Content-Type: application/json
+
+{
+  "endpoint" : "https://webhook.site/2dc99db4-effb-49d9-99de-7ebcdd75b00e"
+}

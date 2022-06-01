@@ -1,0 +1,7 @@
+POST http://localhost:8080/sqs/person
+Content-Type: application/json
+
+{
+  "queue": "person",
+  "name": "bsk"
+}
