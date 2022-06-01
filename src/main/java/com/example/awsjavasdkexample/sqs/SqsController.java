@@ -49,11 +49,11 @@ public class SqsController {
         }
     }
 
-    @SqsListener(value = "test", deletionPolicy = SqsMessageDeletionPolicy.ON_SUCCESS)
-    public void listenString(@Payload Object message, @Headers Map<String, String> headers) {
-        log.info("{}", message);
-        log.info("{}", headers);
-    }
+//    @SqsListener(value = "test", deletionPolicy = SqsMessageDeletionPolicy.ON_SUCCESS)
+//    public void listenString(@Payload Object message, @Headers Map<String, String> headers) {
+//        log.info("{}", message);
+//        log.info("{}", headers);
+//    }
 
 //    @SqsListener(value = "person", deletionPolicy = SqsMessageDeletionPolicy.NEVER)
 //    public void listenString(@Payload Person person, @Headers Map<String, String> headers, Acknowledgment ack) {
