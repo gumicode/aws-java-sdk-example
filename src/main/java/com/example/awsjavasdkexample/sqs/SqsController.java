@@ -31,6 +31,7 @@ public class SqsController {
     public void createQueue(@RequestBody Map<String, String> body) {
         CreateQueueResult result = amazonSQSAsync.createQueue(body.get("queue"));
         log.info("{}", result);
+
     }
 
     @PostMapping("/sqs/message")
