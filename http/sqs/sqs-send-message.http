@@ -3,5 +3,5 @@ Content-Type: application/json
 
 {
   "queue": "test",
-  "message": "send sqs 1"
+  "message": "send sqs x2"
 }

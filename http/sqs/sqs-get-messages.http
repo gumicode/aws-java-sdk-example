@@ -1,4 +1,4 @@
-GET http://localhost:8080/sqs/message
+GET http://localhost:8080/sqs/messages
 Content-Type: application/json
 
 {

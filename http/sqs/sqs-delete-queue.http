@@ -1,0 +1,6 @@
+DELETE http://localhost:8080/sqs/queue
+Content-Type: application/json
+
+{
+  "queue": "test"
+}

@@ -1,0 +1,6 @@
+DELETE http://localhost:8080/sqs/fifo/queue
+Content-Type: application/json
+
+{
+  "queue": "test.fifo"
+}
