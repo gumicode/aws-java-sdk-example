@@ -8,10 +8,8 @@ import com.amazonaws.services.sns.message.SnsSubscriptionConfirmation;
 import com.amazonaws.services.sns.model.*;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.ServletInputStream;
 import javax.servlet.http.HttpServletRequest;
@@ -26,7 +24,7 @@ public class SnsController {
 
     private final AmazonSNS amazonSNS;
     private final SnsMessageManager snsMessageManager;
-    private final String arn = "";
+    private static final String arn = "";
 
     @PostMapping("/sns/topic")
     public void createTopic(@RequestBody Map<String, String> body) {
@@ -34,7 +32,13 @@ public class SnsController {
         log.info("{}", res);
     }
 
-    @PostMapping("/sns/subscribe")
+    @DeleteMapping("/sns/topic")
+    public void deleteTopic(@RequestBody Map<String, String> body) {
+        DeleteTopicResult topic = amazonSNS.deleteTopic(arn + body.get("topic"));
+        log.info("{}", topic);
+    }
+
+    @PostMapping("/sns/subscribe-endpoint")
     public void subScribe(@RequestBody Map<String, String> body) {
 
         SubscribeRequest subscribeRequest = new SubscribeRequest();
