@@ -1,0 +1,2 @@
+POST http://localhost:8080/s3/object
+Content-Type: application/json
